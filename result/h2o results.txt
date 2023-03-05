@@ -1,0 +1,115 @@
+Checking whether there is an H2O instance running at http://localhost:54321. connected.
+
+H2O_cluster_uptime: 	5 mins 47 secs
+H2O_cluster_timezone: 	Etc/UTC
+H2O_data_parsing_timezone: 	UTC
+H2O_cluster_version: 	3.40.0.1
+H2O_cluster_version_age: 	24 days
+H2O_cluster_name: 	H2O_from_python_unknownUser_r0qfob
+H2O_cluster_total_nodes: 	1
+H2O_cluster_free_memory: 	3.109 Gb
+H2O_cluster_total_cores: 	2
+H2O_cluster_allowed_cores: 	2
+H2O_cluster_status: 	locked, healthy
+H2O_connection_url: 	http://localhost:54321
+H2O_connection_proxy: 	{"http": null, "https": null}
+H2O_internal_security: 	False
+Python_version: 	3.8.10 final
+
+Parse progress: |████████████████████████████████████████████████████████████████| (done) 100%
+AutoML progress: |
+16:49:25.49: _train param, Dropping bad and constant columns: [headlines]
+
+█████████
+16:49:35.133: _train param, Dropping bad and constant columns: [headlines]
+16:49:35.947: _train param, Dropping bad and constant columns: [headlines]
+
+████████████
+16:49:46.406: _train param, Dropping unused columns: [headlines]
+16:49:46.771: _train param, Dropping bad and constant columns: [headlines]
+
+████
+16:49:50.227: _train param, Dropping bad and constant columns: [headlines]
+
+██████
+16:49:55.292: _train param, Dropping bad and constant columns: [headlines]
+
+████
+16:49:59.309: _train param, Dropping bad and constant columns: [headlines]
+
+██████
+16:50:04.990: _train param, Dropping bad and constant columns: [headlines]
+
+█████
+16:50:09.885: _train param, Dropping unused columns: [headlines]
+
+█
+16:50:10.74: _train param, Dropping unused columns: [headlines]
+16:50:10.381: _train param, Dropping bad and constant columns: [headlines]
+
+██
+16:50:12.274: _train param, Dropping bad and constant columns: [headlines]
+
+███
+16:50:14.971: _train param, Dropping bad and constant columns: [headlines]
+
+███
+16:50:17.552: _train param, Dropping bad and constant columns: [headlines]
+
+█
+16:50:19.156: _train param, Dropping unused columns: [headlines]
+
+█
+16:50:19.520: _train param, Dropping unused columns: [headlines]
+
+██████| (done) 100%
+
+Model Details
+=============
+H2OStackedEnsembleEstimator : Stacked Ensemble
+Model Key: StackedEnsemble_AllModels_2_AutoML_2_20230305_164925
+
+Model Summary for Stacked Ensemble: key 	value
+Stacking strategy 	cross_validation
+Number of base models (used / total) 	5/12
+# GBM base models (used / total) 	3/5
+# XGBoost base models (used / total) 	1/3
+# DRF base models (used / total) 	1/2
+# GLM base models (used / total) 	0/1
+# DeepLearning base models (used / total) 	0/1
+Metalearner algorithm 	GLM
+Metalearner fold assignment scheme 	Random
+Metalearner nfolds 	5
+Metalearner fold_column 	None
+Custom metalearner hyperparameters 	None
+
+ModelMetricsRegressionGLM: stackedensemble
+** Reported on train data. **
+
+MSE: 64.56611936203254
+RMSE: 8.035304559382459
+MAE: 7.10891537030812
+RMSLE: 0.005735441034546702
+Mean Residual Deviance: 64.56611936203254
+R^2: 0.9996860909855599
+Null degrees of freedom: 986
+Residual degrees of freedom: 981
+Null deviance: 203010289.22025305
+Residual deviance: 63726.75981032611
+AIC: 6928.494502206447
+
+ModelMetricsRegressionGLM: stackedensemble
+** Reported on cross-validation data. **
+
+MSE: 52.61985338060575
+RMSE: 7.253954327165684
+MAE: 4.4102307686098925
+RMSLE: 0.005876066245025321
+Mean Residual Deviance: 52.61985338060575
+R^2: 0.9997441716107782
+Null degrees of freedom: 986
+Residual degrees of freedom: 981
+Null deviance: 203702579.08870408
+Residual deviance: 51935.79528665787
+AIC: 6726.557938412846
+
