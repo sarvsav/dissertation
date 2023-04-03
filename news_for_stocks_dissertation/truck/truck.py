@@ -5,7 +5,8 @@ import requests
 class Truck():
 
     year = 2023
-    stime = 44927 # 1 January, 2023 - 36892 - 1 Jan, 2001
+    #stime = 44927 # 1 January, 2023 - 36892 - 1 Jan, 2001
+    stime = 45006
     month = 1
     url = f'https://economictimes.indiatimes.com/archivelist/year-{year},month-{month},starttime-{stime}.cms'
     html_output = f'data/{year}_{month}_{stime}.html'
@@ -27,9 +28,10 @@ class Truck():
             f.write(req.text)
 
     def dump_to_csv(self, result, news_date):
+        print(news_date)
         row = [news_date]
         for data in result[3:-1]:
             row.append(data.get_text())
-        with open("out/data.csv", "a") as fp:
+        with open("out/data.csv", "a", encoding="utf-8") as fp:
             wr = csv.writer(fp, dialect="excel")
             wr.writerow(row)
